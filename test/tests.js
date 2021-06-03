@@ -3,6 +3,7 @@ import { add } from '../calculations.js';
 import { subtract } from '../calculations.js';
 import { divide } from '../calculations.js';
 import { multiply } from '../calculations.js';
+import { square } from '../calculations.js';
 
 const test = QUnit.test;
 
@@ -35,5 +36,10 @@ test('divide two numbers', (expect) => {
 test('multiply two number', (expect) => {
     const expected = 6;
     const actual = multiply(3, 2)
+    expect.equal(expected, actual);
+})
+test('add two squared numbers', (expect) => {
+    const expected = 5;
+    const actual = square(3, 4);
     expect.equal(expected, actual);
 })

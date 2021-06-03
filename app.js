@@ -3,6 +3,7 @@ import { add } from './calculations.js';
 import { subtract } from './calculations.js';
 import { divide } from './calculations.js';
 import { multiply } from './calculations.js';
+import { square } from './calculations.js';
 
 
 
@@ -30,6 +31,11 @@ const multiplyYInput = document.getElementById("multiply-y-input");
 const multiplyButton = document.getElementById("multiply-button");
 const multiplyResult = document.getElementById("multiply-result");
 
+const InputA = document.getElementById("input-a");
+const InputB = document.getElementById("input-b");
+const squareButton = document.getElementById("square-button");
+const squareResult = document.getElementById("square-result");
+
 console.log(addXInput, addYInput, addButton, addResult);
 
 console.log(subtractXInput, subtractYInput, subtractButton, subtractResult);
@@ -37,6 +43,8 @@ console.log(subtractXInput, subtractYInput, subtractButton, subtractResult);
 console.log(divideXInput, divideYInput, divideButton, divideResult);
 
 console.log(multiplyXInput, multiplyYInput, multiplyButton, multiplyResult);
+
+console.log(InputA, InputB, squareButton, squareResult);
 
 
 
@@ -71,6 +79,14 @@ multiplyButton.addEventListener('click', () => {
     const mult = multiply(x, y);
     console.log(mult);
     multiplyResult.textContent = mult;
+
+})
+squareButton.addEventListener('click', () => {
+    const x = Number(InputA.value);
+    const y = Number(InputB.value);
+    const sq = square(x, y);
+    console.log(sq);
+    squareResult.textContent = sq;
 
 })
   // get user input(s)
